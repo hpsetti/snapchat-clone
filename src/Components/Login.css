@@ -1,0 +1,27 @@
+.login {
+    background-color:#feff00;
+    display:grid;
+    place-items:center;
+    height:100vh;
+    width:100%;
+}
+
+.login__container {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.login__container > img {
+    height:300px;
+    object-fit:contain;
+}
+
+.login__container > button {
+    margin-top:50px;
+    background-color:transparent;
+    border:1px solid;
+    padding:10px;
+    border-radius:8px;
+    text-transform:uppercase;
+}
