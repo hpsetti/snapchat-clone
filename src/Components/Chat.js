@@ -1,4 +1,5 @@
 import "./Chat.css"
+import Avatar from '@mui/material/Avatar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import StopRoundedIcon from '@mui/icons-material/StopRounded';
 import ReactTimeAgo from 'react-time-ago'
@@ -31,7 +32,7 @@ const Chat = ({id, username, timestamp, image, read,profilePic}) => {
 
     return(
         <div onClick={openChat} className="chat">
-            <AccountCircleIcon className="chat__avatar" src={profilePic}/>
+            <Avatar className="chat__avatar" src={profilePic}/>
             <div className="chat__info">
                 <h4>{username}</h4>
                 <p>{!read && "Tap to view -"}{" "} 

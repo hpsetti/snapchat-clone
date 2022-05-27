@@ -2,6 +2,7 @@ import {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {selectCameraImage,resetCameraImage} from '../features/cameraSlice'
+import {selectUser} from "../features/appSlice";
 import CloseIcon from '@mui/icons-material/Close';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import CreateIcon from '@mui/icons-material/Create';
@@ -23,6 +24,7 @@ const Preview = () => {
     const imageCreated = useSelector(selectCameraImage)
     let navigate = useNavigate();
     const dispatch = useDispatch();
+    const user = useSelector(selectUser)
 
     useEffect(()=> {
         if(!imageCreated) {
@@ -60,6 +62,7 @@ const Preview = () => {
                 const docData = {
                         image:url,
                         username:'HarishP',
+                        profilePic:user.profilePic,
                         read:false,
                         timestamp:serverTimestamp()
                     }
